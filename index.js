@@ -1,7 +1,6 @@
 const mineflayer = require('mineflayer');
 const fs = require('fs');
 
-const app = express();
 const config = JSON.parse(fs.readFileSync('settings.json', 'utf8'));
 
 

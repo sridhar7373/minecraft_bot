@@ -51,9 +51,9 @@ function createBot() {
         console.error(`Error: ${err.message}`);
     });
 
-    bot.on('kicked', (reason) => {
-        console.warn(`Kicked: ${reason}`);
-    });
+    // bot.on('kicked', (reason) => {
+    //     console.warn(`Kicked: ${reason}`);
+    // });
 
     bot.on('chat', (username, message) => {
         if (username === bot.username) return;

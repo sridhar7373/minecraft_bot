@@ -1,3 +1,4 @@
+const express = require('express');
 const mineflayer = require('mineflayer');
 const fs = require('fs');
 
@@ -5,6 +6,11 @@ const app = express();
 const config = JSON.parse(fs.readFileSync('settings.json', 'utf8'));
 
 
+createBot();
+app.get('/', (req, res) => res.send('Bot is running!'));
+app.listen(3000, () => {
+    console.log(`Server is running on port ${3000}`);
+});
 
 function createBot() {
     const bot = mineflayer.createBot({
@@ -55,5 +61,4 @@ function createBot() {
 
     return bot;
 }
-createBot();
 

@@ -6,11 +6,11 @@ const app = express();
 const config = JSON.parse(fs.readFileSync('settings.json', 'utf8'));
 
 
-app.get('/', (req, res) => res.send('Bot is running!'));
-app.listen(3000, () => {
-    console.log(`Server is running on port ${3000}`);
-    createBot();
-});
+// app.get('/', (req, res) => res.send('Bot is running!'));
+// app.listen(3000, () => {
+//     console.log(`Server is running on port ${3000}`);
+// });
+createBot();
 
 function createBot() {
     const bot = mineflayer.createBot({

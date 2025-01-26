@@ -9,8 +9,8 @@ const config = JSON.parse(fs.readFileSync('settings.json', 'utf8'));
 // app.get('/', (req, res) => res.send('Bot is running!'));
 // app.listen(3000, () => {
 //     console.log(`Server is running on port ${3000}`);
+//     createBot();
 // });
-createBot();
 
 function createBot() {
     const bot = mineflayer.createBot({
@@ -51,9 +51,9 @@ function createBot() {
         console.error(`Error: ${err.message}`);
     });
 
-    // bot.on('kicked', (reason) => {
-    //     console.warn(`Kicked: ${reason}`);
-    // });
+    bot.on('kicked', (reason) => {
+        console.warn(`Kicked: ${reason}`);
+    });
 
     bot.on('chat', (username, message) => {
         if (username === bot.username) return;

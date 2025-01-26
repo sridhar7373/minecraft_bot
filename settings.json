@@ -1,0 +1,27 @@
+{
+    "bot-account": {
+      "username": "LoneWolf99638",
+      "password": "",
+      "type": "offline"
+    },
+    "server": {
+        "ip": "minecraft.athisoft.com",
+        "port": 25565,
+        "version": "1.12.1"
+    },
+    "utils": {
+        "auto-auth": {
+        "enabled": true,
+        "password": "dharanidharan"
+        },
+
+        "anti-afk": {
+            "enabled": true,
+            "sneak": true
+        },
+
+        "chat-log": true,
+        "auto-reconnect": true,
+        "auto-recconect-delay": 5000
+    }
+}
